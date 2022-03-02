@@ -1,0 +1,19 @@
+import "./styles.css";
+import { GlobalStyle, Container, ToggleTheme } from "./globalStyles";
+import useToggle from "./hooks/useTheme";
+export default function App() {
+  const [themeSelected, setTheme] = useToggle();
+  return (
+    <>
+      <Container>
+        <ToggleTheme>
+          <button onClick={setTheme}>{themeSelected}</button>
+        </ToggleTheme>
+
+        <h1>Toggle Dark/Light Mode</h1>
+        <h2>it's {themeSelected} theme mode!</h2>
+      </Container>
+      <GlobalStyle theme={themeSelected} />
+    </>
+  );
+}
