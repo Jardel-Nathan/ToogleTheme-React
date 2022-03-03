@@ -5,7 +5,8 @@ export const GlobalStyle = createGlobalStyle`
   body{
     background: ${(props) => (props.theme === "light" ? "#f1f1f1" : "#1c1d20")};
     color: ${(props) => (props.theme === "light" ? "black" : "white")};
-    font-family: -apple-system, sans-serif
+    font-family: -apple-system, sans-serif;
+    transition: background 0.4s;
   }
 
 `;
@@ -29,7 +30,11 @@ export const ToggleTheme = styled.div`
     padding: 10px 20px;
     text-transform: uppercase;
     font-weight: 800;
+    width: 130px;
     cursor: pointer;
     display: flex;
+    svg {
+      margin-right: 10px;
+    }
   }
 `;
