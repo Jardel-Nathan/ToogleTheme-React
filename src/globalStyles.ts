@@ -3,8 +3,9 @@ import styled, { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
   body{
-    background: ${(props) => (props.theme === "light" ? "white" : "black")};
-    color: ${(props) => (props.theme === "light" ? "black" : "white")}
+    background: ${(props) => (props.theme === "light" ? "#f1f1f1" : "#1c1d20")};
+    color: ${(props) => (props.theme === "light" ? "black" : "white")};
+    font-family: -apple-system, sans-serif
   }
 
 `;
@@ -25,8 +26,10 @@ export const ToggleTheme = styled.div`
     background: white;
     border: solid 2px black;
     border-radius: 8px;
-    padding: 10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
     font-weight: 800;
     cursor: pointer;
+    display: flex;
   }
 `;
